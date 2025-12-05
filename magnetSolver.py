@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.special import ellipk, ellipe
 import matplotlib.pyplot as plt
-from tqdm import tqdm
+#from tqdm import tqdm
 
 
 # The following functions are geometric/ elliptical functions used in calculating the fields
@@ -48,7 +48,8 @@ class MagnetSolve:
             B_r_magnet = np.zeros(self.space[1].shape)
             B_z_magnet = np.zeros(self.space[0].shape)
 
-            for setting in tqdm(settings):
+            #for setting in tqdm(settings):
+            for setting in settings:
                 magnetSolver = CurrentLoopSolve(**setting, coordinates=self.space)
                 B_r, B_z = magnetSolver.solve_field()
                 B_r_magnet += B_r

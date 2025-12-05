@@ -9,4 +9,10 @@ class FieldLines:
         pass
 
     def solveFieldLines(self):
+        """
+        Basic idea is to solve the field lines
+
+        :return:
+        """
+
         pass

@@ -1,10 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+import matplotlib.patches as patches
 
 class CoilGeometry:
     def __init__(self, magnet_settings):
 
+        self.input_settings = magnet_settings
         self.magnet_settings = {}
         for magnet, settings in magnet_settings.items():
             self.magnet_settings[magnet] = self._compute_coil_geometry(settings)
@@ -28,6 +29,19 @@ class CoilGeometry:
                 sub_coil['current'] = coil_settings['current']
                 sub_coil_settings_list.append(sub_coil)
         return sub_coil_settings_list
+
+    def plot_coils(self, f, a):
+        for magnet, setting in self.input_settings.items():
+            rect = patches.Rectangle((setting['position'][0] - setting['width']/2,setting['position'][1] - setting['depth']/2),
+                        setting['width'], setting['depth'], linewidth=1, edgecolor='r', facecolor='r')
+
+            # Add the patch to the Axes
+            a.add_patch(rect)
+            #a.Rectangle((setting['position'][0] - setting['width']/2,setting['position'][1] - setting['depth']/2),
+             #           setting['depth'], setting['width'], color='r')
+
+        return f, a
+
 
 
 if __name__ == "__main__":

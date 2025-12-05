@@ -32,31 +32,31 @@ if __name__ == "__main__":
 
     # Magnet Coil parameters for each section of the machine
     section_1_coils = {
-        'M1_1': {'current': I_1, 'position': (0.0, 0.355), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 191},
-        'M1_2': {'current': I_1, 'position': (0.1, 0.355), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 191},
-        'M1_3': {'current': I_1, 'position': (.385, 0.355), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 191},
-        'M1_4': {'current': I_1, 'position': (0.59, 0.355), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 191},
-        'M1_5': {'current': I_1, 'position': (0.8, 0.355), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 191},
-        'M1_6': {'current': I_1, 'position': (1.0, 0.355), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 191},
-        'M1_7': {'current': I_1, 'position': (1.2, 0.355), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 191}}
+        'M1_1': {'current': I_1, 'position': (0.0, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 40},
+        'M1_2': {'current': I_1, 'position': (0.1, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 40},
+        'M1_3': {'current': I_1, 'position': (.385, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 40},
+        'M1_4': {'current': I_1, 'position': (0.59, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 40},
+        'M1_5': {'current': I_1, 'position': (0.8, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 40},
+        'M1_6': {'current': I_1, 'position': (1.0, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 40},
+        'M1_7': {'current': I_1, 'position': (1.2, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 40}}
 
     section_2_coils = {
-        'M2_1': {'current': I_2, 'position': (1.27 + .095, 0.345475), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 150},
-        'M2_2': {'current': I_2, 'position': (1.27 + .36, 0.345475), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 150},
-        'M2_3': {'current': I_2, 'position': (1.27 + .585, 0.345475), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 150},
-        'M2_4': {'current': I_2, 'position': (1.27 + .785, 0.345475), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 150},
-        'M2_5': {'current': I_2, 'position': (1.27 + .99, 0.345475), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 150},
-        'M2_6': {'current': I_2, 'position': (1.27 + 1.21, 0.345475), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 150},
-        'M2_7': {'current': I_2, 'position': (1.27 + 1.305, 0.345475), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 150},
-        'M2_8': {'current': I_2, 'position': (1.27 + 1.415, 0.345475), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 150}}
+        'M2_1': {'current': I_2, 'position': (1.27 + .095, 0.297), 'width': 0.05715, 'depth': 0.06985,
+                 'n_turns': 31},
+        'M2_2': {'current': I_2, 'position': (1.27 + .36, 0.297), 'width': 0.05715, 'depth': 0.06985,
+                 'n_turns': 31},
+        'M2_3': {'current': I_2, 'position': (1.27 + .585, 0.297), 'width': 0.05715, 'depth': 0.06985,
+                 'n_turns': 31},
+        'M2_4': {'current': I_2, 'position': (1.27 + .785, 0.297), 'width': 0.05715, 'depth': 0.06985,
+                 'n_turns': 31},
+        'M2_5': {'current': I_2, 'position': (1.27 + .99, 0.297), 'width': 0.05715, 'depth': 0.06985,
+                 'n_turns': 31},
+        'M2_6': {'current': I_2, 'position': (1.27 + 1.21, 0.297), 'width': 0.05715, 'depth': 0.06985,
+                 'n_turns': 31},
+        'M2_7': {'current': I_2, 'position': (1.27 + 1.305, 0.297), 'width': 0.05715, 'depth': 0.06985,
+                 'n_turns': 31},
+        'M2_8': {'current': I_2, 'position': (1.27 + 1.415, 0.297), 'width': 0.05715, 'depth': 0.06985,
+                 'n_turns': 31}}
 
     section_3_coils = {
         'M3_1': {'current': I_3, 'position': (1.27 + 1.245 + 0.30 + .025, 0.355), 'width': 0.01905, 'depth': 0.0889,
@@ -117,6 +117,7 @@ if __name__ == "__main__":
     a.set_title("Axial Field Profile")
     a.set_xlabel('$z$ [m]')
     a.set_ylabel(r"$B_z$ [G]")
+    a.text(0.6, 70, r'$I=10 \; A$', size=20)
     a.legend()
 
     f.savefig('estimated_axial_field_profile.png')
