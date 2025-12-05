@@ -42,21 +42,21 @@ if __name__ == "__main__":
 
     section_2_coils = {
         'M2_1': {'current': I_2, 'position': (1.27 + .095, 0.297), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 31},
+                 'n_turns': 236},
         'M2_2': {'current': I_2, 'position': (1.27 + .36, 0.297), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 31},
+                 'n_turns': 236},
         'M2_3': {'current': I_2, 'position': (1.27 + .585, 0.297), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 31},
+                 'n_turns': 236},
         'M2_4': {'current': I_2, 'position': (1.27 + .785, 0.297), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 31},
+                 'n_turns': 236},
         'M2_5': {'current': I_2, 'position': (1.27 + .99, 0.297), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 31},
+                 'n_turns': 236},
         'M2_6': {'current': I_2, 'position': (1.27 + 1.21, 0.297), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 31},
+                 'n_turns': 236},
         'M2_7': {'current': I_2, 'position': (1.27 + 1.305, 0.297), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 31},
+                 'n_turns': 236},
         'M2_8': {'current': I_2, 'position': (1.27 + 1.415, 0.297), 'width': 0.05715, 'depth': 0.06985,
-                 'n_turns': 31}}
+                 'n_turns': 236}}
 
     section_3_coils = {
         'M3_1': {'current': I_3, 'position': (1.27 + 1.245 + 0.30 + .025, 0.355), 'width': 0.01905, 'depth': 0.0889,
