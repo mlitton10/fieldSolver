@@ -32,13 +32,13 @@ if __name__ == "__main__":
 
     # Magnet Coil parameters for each section of the machine
     section_1_coils = {
-        'M1_1': {'current': I_1, 'position': (0.0, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 40},
-        'M1_2': {'current': I_1, 'position': (0.1, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 40},
-        'M1_3': {'current': I_1, 'position': (.385, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 40},
-        'M1_4': {'current': I_1, 'position': (0.59, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 40},
-        'M1_5': {'current': I_1, 'position': (0.8, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 40},
-        'M1_6': {'current': I_1, 'position': (1.0, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 40},
-        'M1_7': {'current': I_1, 'position': (1.2, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 40}}
+        'M1_1': {'current': I_1, 'position': (0.0, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 305},
+        'M1_2': {'current': I_1, 'position': (0.1, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 305},
+        'M1_3': {'current': I_1, 'position': (.385, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 305},
+        'M1_4': {'current': I_1, 'position': (0.59, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 305},
+        'M1_5': {'current': I_1, 'position': (0.8, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 305},
+        'M1_6': {'current': I_1, 'position': (1.0, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 305},
+        'M1_7': {'current': I_1, 'position': (1.2, 0.308), 'width': 0.05715, 'depth': 0.0889, 'n_turns': 305}}
 
     section_2_coils = {
         'M2_1': {'current': I_2, 'position': (1.27 + .095, 0.297), 'width': 0.05715, 'depth': 0.06985,
