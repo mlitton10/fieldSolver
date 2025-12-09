@@ -16,8 +16,8 @@ plt.rcParams.update(rc_dict)
 if __name__ == "__main__":
 
     # define the spatial extent over which to compute the magnetic field
-    r_space = np.linspace(0, 0.3, 500)
-    z_space = np.linspace(0, 3, 1000)
+    r_space = np.linspace(0, 0.3, 200)
+    z_space = np.linspace(0, 3, 400)
 
     R, Z = np.meshgrid(r_space, z_space)
     coordinate_system = [Z, R]
@@ -104,8 +104,8 @@ if __name__ == "__main__":
     f, a = plt.subplots(1, 1)
 
     a.plot(z_space, total_field['Bz'][:, 0] * 1e4, label=r'$r={}$'.format(r_space[0]))
-    a.plot(z_space, total_field['Bz'][:, 250] * 1e4, label=r'$r={}$'.format(r_space[250]))
-    a.plot(z_space, total_field['Bz'][:, 400] * 1e4, label=r'$r={}$'.format(r_space[400]))
+  #  a.plot(z_space, total_field['Bz'][:, 250] * 1e4, label=r'$r={}$'.format(r_space[250]))
+  #  a.plot(z_space, total_field['Bz'][:, 400] * 1e4, label=r'$r={}$'.format(r_space[400]))
 
     a.legend()
     plt.show()
