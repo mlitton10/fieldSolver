@@ -1,5 +1,5 @@
 import numpy as np
-
+from scipy.interpolate import interp2d
 
 def rungeKuttaBound(dydx, x0, y0, x_bound_low, x_bound_high, y_bound, h):
     y = y0
@@ -27,12 +27,36 @@ def rungeKuttaBound(dydx, x0, y0, x_bound_low, x_bound_high, y_bound, h):
 
 
 class FieldLines:
-    def __init__(self, fields):
+    def __init__(self, fields, coordinate_system, n_field_lines, r_wall=0.2):
         self.field_dict = fields
         self.Br = fields['Br']
         self.Bz = fields['Bz']
+        self.coordinate_system = self.coordinate_system
+        self.r_wall = r_wall
 
+        field_ratio = self.Bz / self.Br
+
+        self.ratio_interpolation = interp2d(*coordinate_system, field_ratio)
+        self.n_field_lines = n_field_lines
+
+        self.spatial_bounds = self._find_spatial_bounds()
+        self.initial_conditions = self._pick_initial_points()
         pass
+
+    def _find_spatial_bounds(self):
+        r_bounds = [np.min(self.coordinate_system[1]), np.max(self.coordinate_system[1])]
+        z_bounds = [np.min(self.coordinate_system[0]), np.max(self.coordinate_system[0])]
+
+        return [z_bounds, r_bounds]
+
+    def _pick_initial_points(self):
+
+        z_initial = self.spatial_bounds[0][0]
+        r_initial = np.linspace(0, self.r_wall, self.n_field_lines)
+
+        return np.array([(z_initial, r) for r in r_initial])
+
+
 
     def solveFieldLines(self):
         """

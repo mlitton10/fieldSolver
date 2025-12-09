@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from magnetSolver import MagnetSolve
 from coil_geometry import CoilGeometry
 
+
 rc_dict = {"figure.autolayout": True, "font.family": 'serif', 'font.size': 18.0, 'lines.linewidth': 2.5,
            'axes.titlepad': 8.0,
            'xtick.minor.visible': True, 'ytick.minor.visible': True, 'axes.linewidth': 2.0, 'xtick.major.width': 2.0,
@@ -27,6 +28,9 @@ if __name__ == "__main__":
     I_2 = 10.0
     I_3 = 10.0
 
+    I_1 = 9.0
+    I_2 = 11.0
+    I_3 = 50.0
     # radius of the wall for some plotting features
     r_wall = 0.22
 
