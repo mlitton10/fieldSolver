@@ -31,7 +31,7 @@ class FieldLines:
         self.field_dict = fields
         self.Br = fields['Br']
         self.Bz = fields['Bz']
-        print(self.Bz.shape)
+
         self.coordinate_system = coordinate_system
         self.r_wall = r_wall
 
