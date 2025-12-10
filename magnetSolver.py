@@ -120,7 +120,7 @@ class CurrentLoopSolve:
 
             return B
 
-        B_r = Br(self.R, self.space[0] - self.R, self.space[1])
+        B_r = Br(self.R, self.space[0] - self.Z, self.space[1])
         B_z = Bz(self.R, self.space[0] - self.Z, self.space[1])
 
         return B_r, B_z
