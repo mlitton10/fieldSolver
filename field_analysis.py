@@ -8,7 +8,7 @@ def rungeKuttaBound(dydx, x0, y0, x_bound_low, x_bound_high, y_bound, h):
     y_list = [y0]
     x_list = [x0]
 
-    while x_bound_low <= x0 <= x_bound_high and y <= y_bound:
+    while x_bound_low <= x0 <= x_bound_high and 0 <= y <= y_bound:
         "Apply Runge Kutta Formulas to find next value of y"
         k1 = h * dydx(x0, y)[0]
         k2 = h * dydx(x0 + 0.5 * h, y + 0.5 * k1)[0]
@@ -58,12 +58,26 @@ class FieldLines:
 
         return np.array([(z_initial+0.001, r) for r in r_initial])
 
-    def solveFieldLines(self):
+    def solveFieldLines(self, stepsize=None, initial_conditions=None):
         solutions_set = []
 
-        for ic in self.initial_conditions:
-            z_sol, r_sol = rungeKuttaBound(self.ratio_interpolation, ic[0], ic[1], self.spatial_bounds[0][0],
-                                           self.spatial_bounds[0][1], self.spatial_bounds[1][1], self.stepsize)
+        if initial_conditions is None:
+            for ic in self.initial_conditions:
+                if stepsize is None:
+                    z_sol, r_sol = rungeKuttaBound(self.ratio_interpolation, ic[0], ic[1], self.spatial_bounds[0][0],
+                                                  self.spatial_bounds[0][1], self.spatial_bounds[1][1], self.stepsize)
+                else:
+                    z_sol, r_sol = rungeKuttaBound(self.ratio_interpolation, ic[0], ic[1], self.spatial_bounds[0][0],
+                                                   self.spatial_bounds[0][1], self.spatial_bounds[1][1], stepsize)
+                solutions_set.append((z_sol, r_sol))
 
-            solutions_set.append((z_sol, r_sol))
+        else:
+            for ic in initial_conditions:
+                if stepsize is None:
+                    z_sol, r_sol = rungeKuttaBound(self.ratio_interpolation, ic[0], ic[1], self.spatial_bounds[0][0],
+                                                  self.spatial_bounds[0][1], self.spatial_bounds[1][1], self.stepsize)
+                else:
+                    z_sol, r_sol = rungeKuttaBound(self.ratio_interpolation, ic[0], ic[1], self.spatial_bounds[0][0],
+                                                   self.spatial_bounds[0][1], self.spatial_bounds[1][1], stepsize)
+                solutions_set.append((z_sol, r_sol))
         return solutions_set
