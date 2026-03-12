@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from magnetSolver import MagnetSolve
 from coil_geometry import CoilGeometry
 
+
 rc_dict = {"figure.autolayout": True, "font.family": 'serif', 'font.size': 18.0, 'lines.linewidth': 2.5,
            'axes.titlepad': 8.0,
            'xtick.minor.visible': True, 'ytick.minor.visible': True, 'axes.linewidth': 2.0, 'xtick.major.width': 2.0,
@@ -16,8 +17,8 @@ plt.rcParams.update(rc_dict)
 if __name__ == "__main__":
 
     # define the spatial extent over which to compute the magnetic field
-    r_space = np.linspace(0, 0.3, 500)
-    z_space = np.linspace(0, 3, 1000)
+    r_space = np.linspace(0, 0.3, 200)
+    z_space = np.linspace(0, 3, 400)
 
     R, Z = np.meshgrid(r_space, z_space)
     coordinate_system = [Z, R]
@@ -27,6 +28,9 @@ if __name__ == "__main__":
     I_2 = 10.0
     I_3 = 10.0
 
+    I_1 = 9.0
+    I_2 = 11.0
+    I_3 = 50.0
     # radius of the wall for some plotting features
     r_wall = 0.22
 
@@ -104,8 +108,8 @@ if __name__ == "__main__":
     f, a = plt.subplots(1, 1)
 
     a.plot(z_space, total_field['Bz'][:, 0] * 1e4, label=r'$r={}$'.format(r_space[0]))
-    a.plot(z_space, total_field['Bz'][:, 250] * 1e4, label=r'$r={}$'.format(r_space[250]))
-    a.plot(z_space, total_field['Bz'][:, 400] * 1e4, label=r'$r={}$'.format(r_space[400]))
+  #  a.plot(z_space, total_field['Bz'][:, 250] * 1e4, label=r'$r={}$'.format(r_space[250]))
+  #  a.plot(z_space, total_field['Bz'][:, 400] * 1e4, label=r'$r={}$'.format(r_space[400]))
 
     a.legend()
     plt.show()
