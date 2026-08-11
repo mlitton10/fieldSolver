@@ -1,4 +1,4 @@
-from magnetSolver import CurrentLoopSolve
+from src.magnetSolver import CurrentLoopSolve
 import numpy as np
 from tqdm import tqdm
 
