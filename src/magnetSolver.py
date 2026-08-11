@@ -1,7 +1,6 @@
 import numpy as np
 from scipy.special import ellipk, ellipe
 import matplotlib.pyplot as plt
-#from tqdm import tqdm
 
 
 # The following functions are geometric/ elliptical functions used in calculating the fields
