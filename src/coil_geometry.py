@@ -52,8 +52,6 @@ if __name__ == "__main__":
 
     section_1_coil_geometry = CoilGeometry(section_1_coils)
 
-    print(len(section_1_coil_geometry.magnet_settings['M1_1']))
-
     r_list = [values['position'][1] for values in section_1_coil_geometry.magnet_settings['M1_1']]
     z_list = [values['position'][0] for values in section_1_coil_geometry.magnet_settings['M1_1']]
 
